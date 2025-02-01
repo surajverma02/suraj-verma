@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Ubuntu", serif;
+  scroll-behavior: smooth;
+  color: #fff;
+  background-color: #000;
+  height: 200vh;
+}
+
+.nav-link:active {
+  color: #42ba90;
+}
+
+.work {
+  display: grid;
+  width: 100%;
+  column-gap: 5%;
+  row-gap: 20px;
+  grid-template-areas:
+    "head project1"
+    "project2  project1"
+    "project2  project3"
+    "project4  project3"
+    "project4  project5"
+    ". project5";
+  grid-template-columns: 1fr 1fr;
+}
+
+#work-head {
+  grid-area: head;
+}
+#project1 {
+  grid-area: project1;
+}
+#project2 {
+  grid-area: project2;
+}
+#project3 {
+  grid-area: project3;
+}
+#project4 {
+  grid-area: project4;
+}
+#project5 {
+  grid-area: project5;
+}
+
+.tags {
+  transition: all 0.5s ease-in-out;
+}
+.tags:hover {
+  transform: scale(1.5) rotate(360deg);
+}
+
+@media (max-width: 1024px) {
+  .work {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    column-gap: 5%;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .about-text {
+    flex-direction: column-reverse;
+  }
+
+  .about-text .img-box img {
+    height: 350px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .body {
+    padding: 10px;
+  }
+
+  .navbar-head {
+    padding: 0;
+  }
+
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .home {
+    padding: 40px 15px;
+  }
+
+  .my-name {
+    font-size: 70px;
+    margin: 0;
+  }
+
+  .about-text .img-box img {
+    height: 250px;
+    margin: 20px 0;
+  }
+
+  .heading {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .name-break {
+    display: block;
+  }
+}
+
+@media (max-width: 420px) {
+  .name p{
+    font-size: 20px;
+  }
+
+  .name h1{
+    font-size: 55px;
+    line-height: 0.9em;
+  }
+
+  .headpoint{
+    font-size: 16px;
+  }
+
+  .headline{
+    font-size: 12px;
+  }
+
+  .social img{
+    height: 16px;
+  }
+
+  .skill div{
+    width: 100px;
+    height: 100px;
+  }
+}
